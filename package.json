@@ -1,0 +1,14 @@
+{
+  "name": "@tsxui/elements",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "git@github.com:tsxui/elements.git",
+  "author": "Canh Nguyen Van <canhnv@nhanlucsieuviet.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "clsx": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {}
+}
