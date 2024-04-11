@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { ComponentType, PropsWithChildren, forwardRef } from "react";
 import { HTMLProps } from "../types/component";
+import { InlineStyles } from "../InlineStyles";
 
 export interface AppShellProps extends HTMLProps<HTMLDivElement> {
   Header?: ComponentType;
@@ -19,21 +20,24 @@ export const AppShell = forwardRef<HTMLDivElement, PropsWithChildren<AppShellPro
     const { children, className, Header, Navbar, ...rest } = props;
 
     return (
-      <div {...rest} ref={ref} className={clsx(appShellClasses.root, className)}>
-        {Header !== undefined && (
-          <header className={appShellClasses.header}>
-            <Header />
-          </header>
-        )}
-        {Navbar !== undefined && (
-          <div className={appShellClasses.navbar}>
-            <Navbar />
-          </div>
-        )}
-        <main className={appShellClasses.main}>
-          {children}
-        </main>
-      </div>
+      <>
+        <InlineStyles selector="" />
+        <div {...rest} ref={ref} className={clsx(appShellClasses.root, className)}>
+          {Header !== undefined && (
+            <header className={appShellClasses.header}>
+              <Header />
+            </header>
+          )}
+          {Navbar !== undefined && (
+            <div className={appShellClasses.navbar}>
+              <Navbar />
+            </div>
+          )}
+          <main className={appShellClasses.main}>
+            {children}
+          </main>
+        </div>
+      </>
     );
   }
 );
