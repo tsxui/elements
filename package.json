@@ -2,6 +2,8 @@
   "name": "@tsxui/elements",
   "version": "1.0.0",
   "main": "src/index.ts",
+  "type": "module",
+  "types": "src/index.ts",
   "repository": "git@github.com:tsxui/elements.git",
   "author": "Canh Nguyen Van <canhnv@nhanlucsieuviet.com>",
   "license": "MIT",
